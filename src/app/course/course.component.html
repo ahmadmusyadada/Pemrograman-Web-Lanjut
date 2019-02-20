@@ -1,0 +1,23 @@
+<h1>
+  <div style="text-align: center">{{title}}</div>
+  <div style="text-align: center">{{date | date:format}}</div>
+</h1>
+
+<h2>
+  {{'Nama: ' + nama}} <br>
+  {{'Alamat: ' + alamat}} <br>
+  {{'Hobby saya'}}
+</h2>
+
+<table border=1 style="text-align: center">
+  <tr>
+    <th>NO</th>
+    <th>Hobby</th>
+    <th>Keterangan</th>
+  </tr>
+  <tr *ngFor="let Course of Courses">
+    <th>{{Course.no}}</th>
+    <th>{{Course.hobby}}</th>
+    <th>{{Course.keterangan}}</th>
+  </tr>
+</table>

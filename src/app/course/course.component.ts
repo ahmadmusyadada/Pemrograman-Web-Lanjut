@@ -11,7 +11,9 @@ export class CoursesComponent implements OnInit {
   Courses;  
 
   binding = 'property-binding';
-  imageUrl = 'http://lorempixel.com/400/200'
+  imageUrl = 'http://lorempixel.com/400/200';
+  colSpan = 2;
+  isActive = true;
 
   constructor(private service: CoursesService) {
     this.Courses = service.getCourses();

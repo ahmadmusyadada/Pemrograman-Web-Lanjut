@@ -14,6 +14,7 @@ export class CoursesComponent implements OnInit {
   imageUrl = 'http://lorempixel.com/400/200';
   colSpan = 2;
   isActive = true;
+  nama = 'Shintia';
 
   onSave($event){
     $event.stopPropagation();
@@ -22,6 +23,10 @@ export class CoursesComponent implements OnInit {
 
   onDivClick($event){
     console.log("Ini method div", $event)
+  }
+
+  onKeyUp(){
+    console.log(this.nama);
   }
 
   constructor(private service: CoursesService) {

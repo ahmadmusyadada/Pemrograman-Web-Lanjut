@@ -2,9 +2,7 @@
   {{title}}
 </p>
 <table>
-  <tr>
-    <td [attr.colspan]='colSpan'></td>
-  </tr>
+  
   <thead>
     <th>
       #ID
@@ -24,25 +22,16 @@
 
 <img src="{{imageUrl}}" />
 <img [src]="imageUrl" />
-<!-- <body> == $0
-  <app-root _nghost-c0 ng-version="7.2.3">
-    <app-course _ngcontent-c0 _nghost-c1>
-      <p _ngcontent-c1>
-        
-      </p>
-      <table _ngcontent-c1></table>
-      <h2 _ngcontent-c1>property-binding</h2>
-      <h2 _ngcontent-c1>property-binding</h2>
-      <img _ngcontent-c1 src="http://lorempixel.com/400/200">
-      <img _ngcontent-c1 src="http://lorempixel.com/400/200">
-      <table _ngcontent-c1></table>
-      <button _ngcontent-c1 class="btn btn-primary active" type="button">Tambah</button> == $0
-    </app-course>
-  </app-root>
-</body> -->
+<table>
+  <tr>
+    <td [attr.colspan]='colSpan'></td>
+  </tr>
+</table>
 
 <button type="button" class="btn btn-primary" [style.backgroundColor]="isActive?'blue':'white'">Style</button>
 
 <div (click)="onDivClick($event)">
   <button type="button" class="btn btn-danger" (click)="onSave($event)">Button</button>
 </div>
+
+<input type="text" [value]="nama" (keyup.enter)="nama = $event.target.value;onKeyUp()">  

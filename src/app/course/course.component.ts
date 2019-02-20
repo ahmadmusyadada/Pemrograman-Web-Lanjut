@@ -7,16 +7,12 @@ import { CoursesService } from '../courses.service';
   styleUrls: ['./course.component.css']
 })
 export class CoursesComponent implements OnInit {
-  Courses;
-  date   = new Date();
-  title  = 'INI Tugas Pertama Biodata';
-  nama   = 'Ahmad Musyadad Aminullah';
-  alamat = 'Jl. Mawar gang 11';
+  title  = 'Belajar Angular';
+  Courses;  
 
-  get format(){
-    return 'fullDate';
-  }
-  
+  binding = 'property-binding';
+  imageUrl = 'http://lorempixel.com/400/200'
+
   constructor(private service: CoursesService) {
     this.Courses = service.getCourses();
   }

@@ -41,4 +41,8 @@
   </app-root>
 </body> -->
 
-<button type='button' class="btn btn-primary">Tambah</button>
+<button type="button" class="btn btn-primary" [style.backgroundColor]="isActive?'blue':'white'">Style</button>
+
+<div (click)="onDivClick($event)">
+  <button type="button" class="btn btn-danger" (click)="onSave($event)">Button</button>
+</div>

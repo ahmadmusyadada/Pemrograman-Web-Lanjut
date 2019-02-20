@@ -15,6 +15,15 @@ export class CoursesComponent implements OnInit {
   colSpan = 2;
   isActive = true;
 
+  onSave($event){
+    $event.stopPropagation();
+    console.log("button sudah diklik", $event)
+  }
+
+  onDivClick($event){
+    console.log("Ini method div", $event)
+  }
+
   constructor(private service: CoursesService) {
     this.Courses = service.getCourses();
   }

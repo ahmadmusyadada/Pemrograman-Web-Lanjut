@@ -1,0 +1,22 @@
+<p>
+  {{title}}
+</p>
+<table>
+  <tr>
+    <td [attr.colSpan]='colSpan'></td>
+  </tr>
+  <thead>
+    <th>
+      #ID
+    </th>
+    <th>Course name</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Course of Courses">
+      <td>{{ Course.id }}</td>
+      <td>{{ Course.name }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button type='button' class="btn btn-primary">Tambah</button>

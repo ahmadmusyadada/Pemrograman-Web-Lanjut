@@ -1,6 +1,12 @@
-# AhmadMusyadadAminullahTI2B
+# Ahmad Musyadad Aminullah TI2B
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+
+## Jobsheet Sebelumnya
+
+Jobsheet 3: https://github.com/ahmadmusyadada/Pemrograman-Web-Lanjut-Jobsheet-3
+
+Jobsheet 2: https://github.com/ahmadmusyadada/Pemrograman-Web-Lanjut-Jobsheet-2
 
 ## Development server
 
@@ -26,8 +32,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Jobsheet Sebelumnya
-
-Jobsheet 3: https://github.com/ahmadmusyadada/Pemrograman-Web-Lanjut-Jobsheet-3
-
-Jobsheet 2: https://github.com/ahmadmusyadada/Pemrograman-Web-Lanjut-Jobsheet-2

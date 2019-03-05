@@ -2,11 +2,12 @@
   <div class="row">
     <div class="col-xs-12">
       <h3>Ini Adalah Component</h3>
-      <hr>
+      <hr/>
       <app-servers></app-servers>
       <app-server></app-server>
       <app-favorite
         [aliasFavorite] = "post.isFavorite"
+        (change) = "onFavoriteChanged()"
       ></app-favorite>
     </div>
     <!-- <div class="app-server"></div> -->

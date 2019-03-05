@@ -12,7 +12,7 @@ export class FavoriteComponent implements OnInit {
   // isFavorite: boolean;
   @Input('aliasFavorite') isSelected: boolean;
 
-  @Output() change = new EventEmitter();
+  @Output('aliasOutput') change = new EventEmitter();
 
   constructor() { }
 
@@ -28,4 +28,8 @@ export class FavoriteComponent implements OnInit {
     // this.change.emit(this.isSelected);
     this.change.emit({newValue: this.isSelected});
   }
+}
+
+export interface FavoriteChangeEventArgs{
+  newValue: boolean;
 }

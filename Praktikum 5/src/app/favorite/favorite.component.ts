@@ -25,6 +25,7 @@ export class FavoriteComponent implements OnInit {
 
   onClickAlias(){
     this.isSelected =! this.isSelected;
-    this.change.emit(this.isSelected);
+    // this.change.emit(this.isSelected);
+    this.change.emit({newValue: this.isSelected});
   }
 }

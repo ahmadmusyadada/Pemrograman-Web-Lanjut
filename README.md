@@ -2,12 +2,6 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
-## Jobsheet Sebelumnya
-
-Jobsheet 3: https://github.com/ahmadmusyadada/Pemrograman-Web-Lanjut-Jobsheet-3
-
-Jobsheet 2: https://github.com/ahmadmusyadada/Pemrograman-Web-Lanjut-Jobsheet-2
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

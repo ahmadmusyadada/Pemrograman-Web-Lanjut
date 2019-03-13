@@ -9,5 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'belajar-angular';
   courses = [1,2];
+
+  viewMode='map';
   // courses = [];
 }

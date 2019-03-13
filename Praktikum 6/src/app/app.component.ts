@@ -24,4 +24,11 @@ export class AppComponent {
   onAdd(){
     this.coursesFor.push({id: 6, name:'courses6'});
   }
+
+  onRemove(item){
+    console.log(item);
+    let index = this.coursesFor.indexOf(item);
+    console.log(index);
+    this.coursesFor.splice(index, 1);
+  }
 }

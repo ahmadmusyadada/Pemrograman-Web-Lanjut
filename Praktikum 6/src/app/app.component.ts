@@ -10,6 +10,16 @@ export class AppComponent {
   title = 'belajar-angular';
   courses = [1,2];
   // courses = [];
+  coursesForOne;
+  loadCourses(){
+    this.coursesForOne=[
+      {id: 1, nama: 'course1'},
+      {id: 2, nama: 'course2'},
+      {id: 3, nama: 'course3'},
+      {id: 4, nama: 'course4'},
+      {id: 5, nama: 'course5'} 
+    ]
+  }
 
   coursesFor=[
     {id: 1, name: 'course1'},

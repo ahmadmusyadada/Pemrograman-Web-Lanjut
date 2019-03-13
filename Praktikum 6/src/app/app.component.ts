@@ -9,7 +9,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'belajar-angular';
   courses = [1,2];
-
-  viewMode='map';
   // courses = [];
+
+  coursesFor=[
+    {id: 1, name: 'course1'},
+    {id: 2, name: 'course2'},
+    {id: 3, name: 'course3'},
+    {id: 4, name: 'course4'},
+    {id: 5, name: 'course5'}
+  ]
+  
+  viewMode='map';
 }

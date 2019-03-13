@@ -1,6 +1,7 @@
 <ul>
-  <li *ngFor="let item of coursesFor; index as i">
-    {{i}}-{{item.name}}
+  <li *ngFor="let item of coursesFor; even as isEven">
+    {{item.name}}
+    <span *ngIf="isEven">(Even)</span>
   </li>
 </ul>
 

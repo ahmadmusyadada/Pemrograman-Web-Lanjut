@@ -1,9 +1,17 @@
+<button (click)="onAdd()">add</button>
 <ul>
   <li *ngFor="let item of coursesFor; even as isEven">
     {{item.name}}
     <span *ngIf="isEven">(Even)</span>
   </li>
 </ul>
+
+<!-- <ul>
+  <li *ngFor="let item of coursesFor; even as isEven">
+    {{item.name}}
+    <span *ngIf="isEven">(Even)</span>
+  </li>
+</ul> -->
 
 <!-- <ul class = "nav nav-pills">
   <li class = "nav-item">

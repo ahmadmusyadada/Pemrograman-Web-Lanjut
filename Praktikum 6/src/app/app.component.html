@@ -1,8 +1,24 @@
-<br>
+<span
+class="fa"
+[class.fa-star]="isSelected"
+[class.fa-star-o]="!isSelected"
+(click)="onClickAlias()"></span>
+
+<!-- <ng-template [ngIf]="courses.length > 0">
+  <div>
+    list of course
+  </div>
+</ng-template> -->
+
+<!-- <div *ngIf="courses.length > 0">
+  list of courses
+</div> -->
+
+<!-- <br>
 &nbsp; <button (click)="loadCourses()">Tampilkan Data</button>
 <li *ngFor="let itemone of coursesForOne; TrackBy: trackCourse">
   {{itemone.nama}}
-</li>
+</li> -->
 
 <!-- <button (click)="loadCourses()">Tampilkan data</button>
 <li *ngFor="let itemone of coursesForOne">

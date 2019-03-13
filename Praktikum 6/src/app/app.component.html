@@ -3,10 +3,10 @@
   <li *ngFor="let item of coursesFor; even as isEven">
     {{item.name}}
     <span *ngIf="isEven">(Even)</span>
-    <button (click)="onRemove(item)">Remove</button>
+    <!-- <button (click)="onRemove(item)">Remove</button> -->
+    <button (click)="onChange(item)">Update</button>
   </li>
 </ul>
-
 
 <!-- <ul>
   <li *ngFor="let item of coursesFor; even as isEven">

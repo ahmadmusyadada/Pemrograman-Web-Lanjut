@@ -45,4 +45,8 @@ export class AppComponent {
   onChange(item){
     item.name = 'Updated';
   }
+
+  trackCourse(index, itemone){
+    return itemone ? itemone.id : undefined;
+  }
 }

@@ -1,7 +1,13 @@
-<button (click)="loadCourses()">Tampilkan data</button>
-<li *ngFor="let itemone of coursesForOne">
+<br>
+&nbsp; <button (click)="loadCourses()">Tampilkan Data</button>
+<li *ngFor="let itemone of coursesForOne; TrackBy: trackCourse">
   {{itemone.nama}}
 </li>
+
+<!-- <button (click)="loadCourses()">Tampilkan data</button>
+<li *ngFor="let itemone of coursesForOne">
+  {{itemone.nama}}
+</li> -->
 
 <!-- <button (click)="onAdd()">add</button>
 <ul>

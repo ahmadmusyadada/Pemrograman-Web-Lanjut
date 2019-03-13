@@ -1,7 +1,11 @@
-<div *ngIf="courses.length > 0">
+<div *ngIf="courses.length > 0; else noCourses">
   list of courses
 </div>
-<div *ngIf="courses.length == 0">
+<ng-template #noCourses>
+  no course yet
+</ng-template>
+
+<!-- <div *ngIf="courses.length == 0">
   no courses yet
-</div>
+</div> -->
 <router-outlet></router-outlet>

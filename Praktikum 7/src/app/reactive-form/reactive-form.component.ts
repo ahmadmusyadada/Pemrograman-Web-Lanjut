@@ -1,3 +1,5 @@
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { mahasiswa } from './../mahasiswa.interface';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReactiveFormComponent implements OnInit {
 
-  constructor() { }
+  mahasiswa: FormGroup;
+
+  constructor(private mhs: FormBuilder) {
+    this.createForm();
+  }
 
   ngOnInit() {
   }
 
+  createForm(){
+    this.mahasiswa = this.mhs.group({
+      nama_mhs:'',
+      pendidikan: this.mhs.group({
+        nama_jurusan: '',
+        nama_prodi: ''
+      })
+    })
+  }
+
+  onSubmit (f:FormGroup){
+    console.log("Hasil dari inputan adalah");
+    console.log(f.value);
+  }
 }

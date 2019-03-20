@@ -19,7 +19,7 @@ import { TemplateDrivenComponent } from './template-driven/template-driven.compo
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

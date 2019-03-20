@@ -3,13 +3,19 @@
     <form action="">
       <div class="form-group">
         <label for="nama">Nama</label>
-        <input type="text"
+        <input
+          type="text"
           id="nama"
           class="form-control"
+          required
           ngModel
           #firstName="ngModel"
           (change)="log(firstName)"
-          name="nama"/>
+          name="nama"
+        />
+        <div class="alert alert-danger" *ngIf="!firstName.valid">
+          Nama harus diisi
+        </div>
       </div>
       <div class="form-group">
         <label for="comment">Comment:</label>

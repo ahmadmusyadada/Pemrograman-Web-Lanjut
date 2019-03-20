@@ -12,4 +12,15 @@ export class TemplateDrivenComponent implements OnInit {
   ngOnInit() {
   }
 
+  mahasiswa= {
+    nama_mhs:'',
+    pendidikan:{
+      nama_jurusan:'',
+      nama_prodi:''
+    }
+  }
+  onSubmit(){
+    console.log("Hasil inputan:");
+    console.log(this.mahasiswa);
+  }
 }

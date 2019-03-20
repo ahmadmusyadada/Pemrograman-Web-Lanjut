@@ -15,8 +15,13 @@ import { Component, OnInit, Input } from '@angular/core';
 //   ngOnInit() {
 //   }
 
-  export class ContactComponent{
-    log(x){
-      console.log(x);
-    }
+export class ContactComponent{
+  log(x){
+    console.log(x);
   }
+
+  submit(form){
+    console.log(form);
+    form.vaild;
+  }
+}

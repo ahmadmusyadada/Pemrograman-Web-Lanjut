@@ -13,7 +13,7 @@
           (change)="log(firstName)"
           name="nama"
         />
-        <div class="alert alert-danger" *ngIf="!firstName.valid">
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
           Nama harus diisi
         </div>
       </div>

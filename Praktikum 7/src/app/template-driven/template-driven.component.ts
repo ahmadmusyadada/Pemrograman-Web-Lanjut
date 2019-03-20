@@ -19,6 +19,7 @@ export class TemplateDrivenComponent implements OnInit {
       nama_prodi:''
     }
   }
+  
   onSubmit(){
     console.log("Hasil inputan:");
     console.log(this.mahasiswa);

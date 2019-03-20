@@ -1,0 +1,78 @@
+<br>
+<!-- &nbsp; <input type="text" appInputFormat [format] = "'uppercase'""> -->
+&nbsp; <input type="text" [appInputFormat] = "'uppercase'">
+
+<!-- <span
+class="fa"
+[ngClass]="{
+  'fa-star': isSelected,
+  'fa-star-o': !isSelected
+}"
+(click)="onClickAlias()"></span> -->
+
+<!-- <span
+class="fa"
+[class.fa-star]="isSelected"
+[class.fa-star-o]="!isSelected"
+(click)="onClickAlias()"></span> -->
+
+<!-- <ng-template [ngIf]="courses.length > 0">
+  <div>
+    list of course
+  </div>
+</ng-template> -->
+
+<!-- <div *ngIf="courses.length > 0">
+  list of courses
+</div> -->
+
+<!-- <br>
+&nbsp; <button (click)="loadCourses()">Tampilkan Data</button>
+<li *ngFor="let itemone of coursesForOne; TrackBy: trackCourse">
+  {{itemone.nama}}
+</li> -->
+
+<!-- <button (click)="loadCourses()">Tampilkan data</button>
+<li *ngFor="let itemone of coursesForOne">
+  {{itemone.nama}}
+</li> -->
+
+<!-- <button (click)="onAdd()">add</button>
+<ul>
+  <li *ngFor="let item of coursesFor; even as isEven">
+    {{item.name}}
+    <span *ngIf="isEven">(Even)</span>
+    <button (click)="onRemove(item)">Remove</button> 
+    <button (click)="onChange(item)">Update</button>
+  </li>
+</ul> -->
+
+<!-- <ul>
+  <li *ngFor="let item of coursesFor; even as isEven">
+    {{item.name}}
+    <span *ngIf="isEven">(Even)</span>
+  </li>
+</ul> -->
+
+<!-- <ul class = "nav nav-pills">
+  <li class = "nav-item">
+    <a
+      (click)="viewMode = 'map'"
+      class="nav-link"
+      [class.active]="viewMode == 'map'"
+    >Map View</a>
+  </li>
+  <li class="nav-item">
+    <a
+      (click)="viewMode = 'list'"
+      class="nav-link"
+      [class.active]="viewMode == 'list'"
+    >List View</a>
+  </li>
+</ul>
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'">Map View Content</div>
+  <div *ngSwitchCase="'list'">List View Content</div>
+  <div *ngSwitchDefault>Other</div>
+</div> -->
+<router-outlet></router-outlet>

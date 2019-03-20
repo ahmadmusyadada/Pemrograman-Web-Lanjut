@@ -11,6 +11,8 @@ import { ServersComponent } from './servers/servers.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ContactComponent } from './contact/contact.component';
     ServersComponent,
     FavoriteComponent,
     InputFormatDirective,
-    ContactComponent
+    ContactComponent,
+    ReactiveFormComponent,
+    TemplateDrivenComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,69 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h3>Ujian Tengah Semester</h3>
+                <form [formGroup]="form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input formControlName="name" id="name" type="text" class="form-control"/>
+                        <div *ngIf="name.touched && name.invalid" class="alert alert-danger">Nama harus diisi</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Alamat">Alamat</label>
+                        <input formControlName="alamat" id="alamat" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="ttl">Tanggal Lahir</label>
+                        <input formControlName="ttl" id="ttl" type="date" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="jeniskelamin">Jenis Kelamin</label>
+                        <input formControlName="jeniskelamin" id="jeniskelamin" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="telepon">No Telepon</label>
+                        <input formControlName="telepon" id="telepon" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">name</label>
+                        <input formControlName="name" id="name" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <form [formGroup]="form" (ngSubmit)="login()">
+    <div *ngIf="form.errors" class="alert alert-danger">The name and password is invalid</div>
+    <div class="form-group">
+      <label for="name">name</label>
+      <input
+        formControlName="name"
+        id="name"
+        type="text"
+        class="form-control"
+      >
+      <div *ngIf="name.pending">Checking for uniqueness. . .</div>
+      <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
+        <div *ngIf="name.errors.required">name is required</div>
+        <div *ngIf="name.errors.minlength">name should minimum {{name.errors.minlength.requiredLength}} characters</div>
+        <div *ngIf="name.errors.cannotContainSpace">Cannot contain space</div>
+        <div *ngIf="name.errors.shouldBeUnique">name is already taken</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        formControlName="password"
+        id="password"
+        type="text"
+        class="form-control"
+      >
+    </div>
+    <button class="btn btn-primary" type="submit">Sign up</button>
+</form> -->

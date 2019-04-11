@@ -3,31 +3,59 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <h3>Ujian Tengah Semester</h3>
-                <form [formGroup]="form">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input formControlName="name" id="name" type="text" class="form-control"/>
-                        <div *ngIf="name.touched && name.invalid" class="alert alert-danger">Nama harus diisi</div>
+                        <div *ngIf="form.get('name').touched && form.get('name').invalid" class="alert alert-danger">Nama harus diisi</div>
                     </div>
                     <div class="form-group">
                         <label for="Alamat">Alamat</label>
                         <input formControlName="alamat" id="alamat" type="text" class="form-control"/>
+                        <div *ngIf="form.get('alamat').touched && form.get('alamat').invalid" class="alert alert-danger">Alamat harus diisi</div>
                     </div>
                     <div class="form-group">
                         <label for="ttl">Tanggal Lahir</label>
                         <input formControlName="ttl" id="ttl" type="date" class="form-control"/>
+                        <div *ngIf="form.get('ttl').touched && form.get('ttl').invalid" class="alert alert-danger">Tanggal lahir harus diisi</div>
                     </div>
                     <div class="form-group">
                         <label for="jeniskelamin">Jenis Kelamin</label>
-                        <input formControlName="jeniskelamin" id="jeniskelamin" type="text" class="form-control"/>
+                        <select id="gender" ng-model="student.gender" class="form-control">
+                            <option value=""></option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        <div *ngIf="form.get('jeniskelamin').touched && form.get('jeniskelamin').invalid" class="alert alert-danger">Jenis Kelamin harus diisi</div>
                     </div>
                     <div class="form-group">
                         <label for="telepon">No Telepon</label>
                         <input formControlName="telepon" id="telepon" type="text" class="form-control"/>
+                        <div *ngIf="form.get('telepon').touched && form.get('telepon').invalid" class="alert alert-danger">
+                            <div *ngIf="form.get('telepon').errors.required">No telepon harus diisi</div>
+                            <div *ngIf="form.get('telepon').errors.pattern">No telepon harus angka</div>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="confirmPassword">name</label>
-                        <input formControlName="name" id="name" type="text" class="form-control"/>
+                        <label for="username">Username</label>
+                        <input formControlName="username" id="username" type="text" class="form-control"/>
+                        <div *ngIf="form.get('username').touched && form.get('username').invalid" class="alert alert-danger">Username harus diisi</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input formControlName="password" id="password" type="password" class="form-control"/>
+                        <div *ngIf="form.get('password').touched && form.get('password').invalid" class="alert alert-danger">
+                            <div *ngIf="form.get('password').errors.required">Password harus diisi</div>
+                            <div *ngIf="form.get('password').errors.minlength">Password minimal 6 karakter</div> 
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input formControlName="confirmPassword" id="confirmPassword" type="password" class="form-control"/>
+                        <div *ngIf="form.get('confirmPassword').touched && form.get('confirmPassword').invalid" class="alert alert-danger">
+                            <div *ngIf="form.get('confirmPassword').errors.required">Password harus diisi</div>
+                            <div *ngIf="form.get('confirmPassword').errors.mustMatch">Password tidak sama</div> 
+                        </div>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary">Register</button>

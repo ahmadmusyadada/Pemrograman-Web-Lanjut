@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AhmadmusyadadaaFormregisterComponent } from './ahmadmusyadadaa-formregister/ahmadmusyadadaa-formregister.component';
+import { MustMatchDirective } from './_helpers/must-match.directive';
 @NgModule({
   imports: [
     AppRoutingModule,
@@ -14,7 +15,8 @@ import { AhmadmusyadadaaFormregisterComponent } from './ahmadmusyadadaa-formregi
   ],
   declarations: [
     AppComponent,
-    AhmadmusyadadaaFormregisterComponent
+    AhmadmusyadadaaFormregisterComponent,
+    MustMatchDirective
   ],
   providers: [],
   bootstrap: [AppComponent]

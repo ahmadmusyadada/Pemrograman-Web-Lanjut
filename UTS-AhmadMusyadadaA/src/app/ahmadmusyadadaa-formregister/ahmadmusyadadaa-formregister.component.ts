@@ -10,7 +10,6 @@ import { MustMatch } from '../_helpers/must-match.validator';
 
 export class AhmadmusyadadaaFormregisterComponent implements OnInit {
   title = 'UTS';
-  model: any = {};
   
   form = new FormGroup({
     name: new FormControl('', Validators.required),
@@ -28,6 +27,7 @@ export class AhmadmusyadadaaFormregisterComponent implements OnInit {
   get f() {
     return this.form.controls;
   }
+  
   login(){
     this.form.setErrors({
         invalidLogin: true
@@ -35,7 +35,7 @@ export class AhmadmusyadadaaFormregisterComponent implements OnInit {
   }
 
   onSubmit() {
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.model));
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.form.value));
   }
 
   constructor() { }

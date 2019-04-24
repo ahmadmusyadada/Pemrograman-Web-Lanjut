@@ -7,8 +7,9 @@ import { Http } from '@angular/http';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent {
+  posts: any[];
 
   constructor(http: Http) {
-      http.get('http://jsonplaceholder.typicode.com/posts').subscribe(response => {console.log(response)});
+      http.get('http://jsonplaceholder.typicode.com/posts').subscribe(response => {this.posts = response.json()});
   }
 }

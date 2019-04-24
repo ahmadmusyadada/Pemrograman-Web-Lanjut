@@ -8,6 +8,7 @@ import { Http } from '@angular/http';
 })
 export class PostsComponent {
 
-  constructor(http: Http) { }
-
+  constructor(http: Http) {
+      http.get('http://jsonplaceholder.typicode.com/posts').subscribe(response => {console.log(response)});
+  }
 }

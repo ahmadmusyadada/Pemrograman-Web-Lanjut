@@ -22,7 +22,7 @@ import { PostsComponent } from './posts/posts.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    // HttpModule
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

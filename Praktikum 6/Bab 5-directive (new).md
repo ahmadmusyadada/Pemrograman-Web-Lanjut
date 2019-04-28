@@ -4,7 +4,7 @@
 
 Disusun sebagai Mata Kuliah: Pemrograman Web Lanjut
 
-![](media/9a827908af7782c94b07f6b25f98252a.png)
+![image](media/9a827908af7782c94b07f6b25f98252a.png)
 
 Oleh:
 

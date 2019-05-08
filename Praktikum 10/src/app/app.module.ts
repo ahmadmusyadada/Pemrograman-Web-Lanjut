@@ -15,6 +15,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { RouterModule } from '@angular/router';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     NavbarComponent,
     PostsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { RouterModule } from '@angular/router';
       {path: '', component: HomeComponent},
       {path: 'form', component: FormMemberComponent},
       {path: 'post', component: PostsComponent},
+      {path: 'profile/:id', component: ProfileComponent},
       {path: '**', component: NotFoundComponent}
     ])
   ],

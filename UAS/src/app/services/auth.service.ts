@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { tokenNotExpired, JwtHelper } from 'angular2-jwt';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthService {
-  constructor(private http: Http) {
+  constructor(private http: Http, public router: Router) {
   }
 
   login(credentials) { 

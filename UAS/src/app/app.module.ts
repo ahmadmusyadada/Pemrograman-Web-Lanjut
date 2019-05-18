@@ -24,6 +24,7 @@ import { PostsComponent } from './posts/posts.component';
 import { FormMemberComponent } from './form-member/form-member.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FriendComponent } from './friend/friend.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ProfileComponent } from './profile/profile.component';
     NavbarComponent,
     PostsComponent,
     FormMemberComponent,
-    ProfileComponent
+    ProfileComponent,
+    FriendComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ import { ProfileComponent } from './profile/profile.component';
       { path: '', component: LoginComponent },
       { path: 'admin', component: AdminComponent },
       // { path: 'login', component: LoginComponent },
-      { path: 'no-access', component: NoAccessComponent }
+      { path: 'no-access', component: NoAccessComponent },
+      { path: 'friend', component: FriendComponent }
     ])
   ],
   providers: [

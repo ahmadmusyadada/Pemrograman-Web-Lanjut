@@ -21,7 +21,7 @@ import { ProfileComponent } from './profile/profile.component';
   declarations: [
     AppComponent,
     // TemplateDrivenComponent,
-    // ContactComponent,
+    ContactComponent,
     // SignupFormComponent,
     FormMemberComponent,
     HomeComponent,
@@ -39,7 +39,7 @@ import { ProfileComponent } from './profile/profile.component';
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'form', component: FormMemberComponent},
-      {path: 'post', component: PostsComponent},
+      {path: 'contactme', component: ContactComponent},
       {path: 'profile/:id', component: ProfileComponent},
       {path: '**', component: NotFoundComponent}
     ])

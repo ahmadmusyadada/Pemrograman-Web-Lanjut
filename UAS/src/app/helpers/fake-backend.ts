@@ -5,7 +5,7 @@ export function fakeBackendFactory(
     backend: MockBackend, 
     options: BaseRequestOptions) {
         
-  let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
+  let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkFobWFkIE11c3lhZGFkIEFtaW51bGxhaCIsImlhdCI6MTUxNjIzOTAyMn0.FxJpSg3-kuZQbZ-w_fk5bwxCq67PGr1AQ54WLZDEjwk';
     
   backend.connections.subscribe((connection: MockConnection) => {
     // We are using the setTimeout() function to simulate an 
@@ -18,7 +18,7 @@ export function fakeBackendFactory(
         connection.request.method === RequestMethod.Post) {
         let body = JSON.parse(connection.request.getBody());
 
-        if (body.email === 'mosh@domain.com' && body.password === '1234') {
+        if (body.email === 'ahmadma' && body.password === '1234') {
           connection.mockRespond(new Response(
             new ResponseOptions({
               status: 200,

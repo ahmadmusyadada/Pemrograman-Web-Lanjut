@@ -50,9 +50,9 @@ import { FriendComponent } from './friend/friend.component';
     HttpModule,
     RouterModule.forRoot([
       { path: '', component: LoginComponent },
-      { path: 'admin', component: AdminComponent },
+      { path: 'contactus', component: ContactComponent },
       // { path: 'login', component: LoginComponent },
-      { path: 'no-access', component: NoAccessComponent },
+      // { path: 'no-access', component: NoAccessComponent },
       { path: 'friend', component: FriendComponent }
     ])
   ],

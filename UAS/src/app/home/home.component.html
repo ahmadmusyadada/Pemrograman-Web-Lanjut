@@ -1,51 +1,9 @@
-<div class="media">
-  <div class="media-body">
-    <h4 class="media-heading">
-      <a href="#"></a>
-    </h4>
-    <div align="center">
-      <h1>My Friends App..!</h1>
-      <img src="assets/image/DSC_0030-1.jpg" alt="image" style="max-width: 40%">
-    </div>
-    <br>
-  </div>
-</div>
-<div class="col-md-4 offset-md-4">
-  <div class="form-group">
-      <label>Username</label>
-      <input
-        type="text"
-        formControlName="email"
-        class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
-      />
-      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-        <div *ngIf="f.email.errors.required">Username is required</div>
-        <div *ngIf="f.email.errors.email">
-          Username must email address
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label>Password</label>
-      <input
-        type="password"
-        formControlName="password"
-        class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
-      />
-      <div
-        *ngIf="submitted && f.password.errors"
-        class="invalid-feedback"
-      >
-        <div *ngIf="f.password.errors.required">Password is required</div>
-        <div *ngIf="f.password.errors.minlength">
-          Password must be at least 6 characters
-        </div>
-      </div>
-      <br>
-      <div class="form-group">
-          <button type="button" class="btn btn-success btn-lg btn-block">Login</button>
-      </div>
-    </div>
-</div>
+<h1>Home Page</h1>
+<p *ngIf="authService.isLoggedIn()">
+  Welcome {{ authService.currentUser.name }}
+</p>
+<ul>
+  <li *ngIf = "authService.isLoggedIn() && authService.currentUser.admin"><a routerLink="/admin">Admin</a></li>
+  <li *ngIf= "!authService.isLoggedIn()"><a routerLink="/login">Login</a></li>
+  <li *ngIf= "authService.isLoggedIn()"><a (click)="authService.logout()">Logout</a></li>
+</ul>

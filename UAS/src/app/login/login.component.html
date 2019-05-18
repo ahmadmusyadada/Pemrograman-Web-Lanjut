@@ -1,0 +1,65 @@
+
+
+<div class="media">
+  <div class="media-body">
+    <h4 class="media-heading">
+      <a href="#"></a>
+    </h4>
+    <div align="center">
+      <h1>My Friends App..!</h1>
+      <img src="assets/image/DSC_0030-1.jpg" alt="image" style="max-width: 40%">
+    </div>
+    <br>
+  </div>
+</div>
+<div class="col-md-4 offset-md-4">
+  <form class="form-signin" class="form-group" #f="ngForm" (ngSubmit)="signIn(f.value)">
+    
+    <label >Username</label>
+    <label for="inputEmail" class="sr-only">Username</label>
+    <input type="email" id="inputEmail" name="email" ngModel class="form-control" placeholder="Username" required autofocus>
+    <br>
+    <label>Password</label>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" name="password" ngModel class="form-control" placeholder="Password" required>
+    <br>
+    <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+    <button class="btn btn-lg btn-primary btn-block btn-success" type="submit">Sign in</button>
+  </form>
+</div>
+
+<!-- <div class="form-group">
+    <label>Username</label>
+    <input
+      type="text"
+      class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+    />
+    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+      <div *ngIf="f.email.errors.required">Username is required</div>
+      <div *ngIf="f.email.errors.email">
+        Username must email address
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input
+      type="password"
+      class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+    />
+    <div
+      *ngIf="submitted && f.password.errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="f.password.errors.required">Password is required</div>
+      <div *ngIf="f.password.errors.minlength">
+        Password must be at least 6 characters
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <button type="button" class="btn btn-success btn-lg btn-block">Login</button>
+    </div>
+  </div> -->

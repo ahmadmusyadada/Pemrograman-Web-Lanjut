@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'belajar-angular';
+  title = 'app works!';
   courses = [1,2];
   // courses = [];
   coursesForOne;

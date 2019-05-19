@@ -26,7 +26,7 @@ export class AuthService {
     this.router.navigate(['/']);
   }
 
-  isLoggedIn() { 
+  isLoggedIn() {
     return tokenNotExpired();
   }
 

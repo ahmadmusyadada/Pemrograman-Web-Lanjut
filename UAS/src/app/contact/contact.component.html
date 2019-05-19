@@ -1,9 +1,11 @@
+<h1 align="center">Contact Me</h1>
+<hr>
+
 <div class="container">
   <div class="col-md-8 offset-md-2">
-    <h1 align="center">Contact Me</h1>
     <br>
     <form #form="ngForm" (ngSubmit)="submit(form)">
-      <div ngModelGroup="contact" #contact="ngModelGroup">
+      <div>
         <div class="form-group">
         <label for="nama">Your Name:</label>
         <input
@@ -28,37 +30,43 @@
       </div>
       
       <div class="form-group">
-        <label for="comment">Your Email:</label>
+        <label for="email">Your Email:</label>
+        <input
+        class="form-control"
+        rows="5"
+        id="email"
+        required
+        email
+        ngModel
+        #emailTeman="ngModel"
+        name="email"
+        />
+        <div class="alert alert-danger" *ngIf="emailTeman.touched && !emailTeman.valid">
+          <div *ngIf="emailTeman.errors['required']">Email Harus Diisi</div>
+          <div *ngIf="emailTeman.errors['email']">Harus Mengandung unsur email</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="contactMethod">Your Message:</label>
         <textarea
         class="form-control"
         rows="5"
         id="comment"
+        required
         ngModel
+        #comment="ngModel"
         name="comment"
         ></textarea>
       </div>
-      <div class="checkbox">
-        <label for="">
-          <input type="checkbox" ngModel name="isSubscribe">Subscribe jika ingin berlangganan
-        </label>
-      </div>
-      <div class="form-group">
-        <label for="contactMethod">Contact Method</label>
-        <select multiple ngModel name="contactMethod" id="contactMethod" class="form-control">
-          <option *ngFor="let method of contactMethods" [ngValue]="method">{{method.name}}</option>
-        </select>
-      </div>
-      <div *ngFor="let method of contactMethods" class="radio">
-        <label for="">
-          <input ngModel type="radio" name="contactMethodRadio" [value]="method.id">{{method.name}}
-        </label>
-      </div>
-      <p>
-        {{form.value|json}}
-      </p>
       <button type="submit" [disabled]="!form.valid" class="btn btn-primary">
-        Button
+        Submit
       </button>
     </form>
+    <hr>
+    <h2><b>Your Data</b></h2>
+    <p>
+      {{form.value|json}}
+    </p>
   </div>
 </div>

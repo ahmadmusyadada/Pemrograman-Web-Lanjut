@@ -4,7 +4,7 @@
 <div class="container">
   <div class="col-md-8 offset-md-2">
     <br>
-    <form #form="ngForm" (ngSubmit)="submit(form)">
+    <form #form="ngForm" (ngSubmit)="submit(form.value)">
       <div>
         <div class="form-group">
         <label for="nama">Your Name:</label>
@@ -14,9 +14,8 @@
           class="form-control"
           required
           minlength="3"
-          maxlength="10"
-          pattern="pisang"
           ngModel
+          autofocus
           #firstName="ngModel"
           (change)="log(firstName)"
           name="nama"
@@ -24,7 +23,6 @@
         <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
           <div *ngIf="firstName.errors['required']">Nama harus diisi</div>
           <div *ngIf="firstName.errors['minlength']">Nama min 3 kata</div>
-          <div *ngIf="firstName.errors['pattern']">Nama tidak sesuai dengan pattern</div>
         </div>
       </div>
       </div>
@@ -59,14 +57,19 @@
         name="comment"
         ></textarea>
       </div>
-      <button type="submit" [disabled]="!form.valid" class="btn btn-primary">
+      <button type="submit" [disabled]="!form.valid" class="btn btn-primary" (click)="submit()">
         Submit
       </button>
     </form>
     <hr>
-    <h2><b>Your Data</b></h2>
-    <p>
-      {{form.value|json}}
-    </p>
+
+    <div *ngIf="yourData">
+      <h2><b>Your Data</b></h2>
+      
+      <p>
+        {{form.value|json}}
+      </p>
+
+    </div>
   </div>
 </div>

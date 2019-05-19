@@ -16,9 +16,10 @@ import { Component, OnInit, Input } from '@angular/core';
 //   }
 
 export class ContactComponent{
-  contactMethods=[
-    {id: 1, name: 'email'},
-    {id: 2, name: 'phone'}
+  yourData: boolean; 
+
+  data=[
+    {nama: '', email: '', comment: ''}
   ]
   
   log(x){
@@ -26,7 +27,6 @@ export class ContactComponent{
   }
 
   submit(form){
-    console.log(form);
-    form.vaild;
+    this.yourData = true;
   }
 }

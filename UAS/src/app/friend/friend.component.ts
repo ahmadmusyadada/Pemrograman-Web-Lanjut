@@ -22,7 +22,11 @@ export class FriendComponent implements OnInit {
   //   console.log(form);
   // }
   submit(form){
-    this.data.push({id: this.data.length + 1, name: form.nama, email: form.email, contact: form.contact});
+    this.data.push({id: this.data.length + 1, name: this.uppercase(form.nama) , email: form.email, contact: form.contact});
     form.valid;
+  }
+
+  uppercase(nama){
+    return nama.toUpperCase();
   }
 }

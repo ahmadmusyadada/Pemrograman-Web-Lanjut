@@ -12,4 +12,17 @@ export class FriendComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  data=[
+    {id: 1, name: 'Peter Liu', email: 'Peter Liu', contact: '08123456789'},
+    {id: 2, name: 'Peter Liu', email: 'Peter Liu', contact: '08123456789'}
+  ]
+
+  // submit(form){
+  //   console.log(form);
+  // }
+  submit(form){
+    this.data.push({id: this.data.length + 1, name: form.nama, email: form.email, contact: form.contact});
+    form.valid;
+  }
 }

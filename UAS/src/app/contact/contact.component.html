@@ -65,11 +65,14 @@
 
     <div *ngIf="yourData">
       <h2><b>Your Data</b></h2>
-      
-      <p>
-        {{form.value|json}}
-      </p>
-
+      <ng-container *ngFor="let item of data || item.slice(-1)[0]">
+          <p>Username: {{item.nama}}</p>
+          <p>Email: {{item.email}}</p>
+          <p>Message: {{item.comment}}</p>
+        <p>Username: {{form.value.nama|json}}</p>
+        <p>Email: {{form.value.email|json}}</p>
+        <p>Message: {{form.value.comment|json}}</p>
+      </ng-container>
     </div>
   </div>
 </div>

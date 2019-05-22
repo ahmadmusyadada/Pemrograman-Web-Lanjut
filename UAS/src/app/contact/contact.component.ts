@@ -6,17 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 
-// export class ContactComponent implements OnInit {
-//   @Input() nama: string;
-//   @Input() comment: string;
-
-//   constructor() { }
-
-//   ngOnInit() {
-//   }
-
-export class ContactComponent{
+export class ContactComponent implements OnInit{
   yourData: boolean; 
+
+  ngOnInit() {
+  }
 
   data=[
     {nama: '', email: '', comment: ''}
@@ -27,6 +21,7 @@ export class ContactComponent{
   }
 
   submit(form){
+    this.data.push({nama: form.nama , email: form.email, comment: form.comment});
     this.yourData = true;
   }
 }

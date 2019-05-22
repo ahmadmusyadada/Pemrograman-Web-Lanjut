@@ -80,8 +80,11 @@
 <br>
 <h3 style=text-align:center>My Friends</h3>
 
-<div class="container">
-  <div class="col-md-10 offset-md-1">
+<div class="container" align="center">
+  <div class="col-md-10 offset-md-1" >
+    Search: <input type="text" placeholder="search" [(ngModel)]="searchText.name" style="width:25%">
+    <br>
+    <hr>
     <table class="table">
       <thead>
         <tr>
@@ -92,12 +95,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of data">
+        <tr *ngFor="let item of data | filterBy: searchText">
           <th scope="row">{{item.id}}</th>
           <td>{{item.name}}</td>
           <td>{{item.email}}</td>
           <td>{{item.contact}}</td>
         </tr>
+        <!-- <h4 *ngIf="(data | filterBy: searchText).length === 0">
+          Not found
+        </h4> -->
       </tbody>
     </table>
   </div>

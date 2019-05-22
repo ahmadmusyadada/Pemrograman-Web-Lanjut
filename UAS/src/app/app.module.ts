@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FriendComponent } from './friend/friend.component';
+import { FilterPipeModule } from 'ngx-filter-pipe';
 
 @NgModule({
   declarations: [
@@ -21,13 +22,14 @@ import { FriendComponent } from './friend/friend.component';
     ContactComponent,
     LoginComponent,
     NavbarComponent,
-    FriendComponent
+    FriendComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpModule,
+    FilterPipeModule,
     RouterModule.forRoot([
       { path: '', component: LoginComponent },
       { path: 'contactus', component: ContactComponent },
@@ -37,7 +39,6 @@ import { FriendComponent } from './friend/friend.component';
   providers: [
     OrderService,
     AuthService,
-    // For creating a mock back-end. You don't need these in a real app. 
     fakeBackendProvider,
     MockBackend,
     BaseRequestOptions

@@ -17,7 +17,6 @@
           minlength="3"
           ngModel
           #namaTeman="ngModel"
-          (change)="log(namaTeman)"
           name="nama"
           />
           <div class="alert alert-danger" *ngIf="namaTeman.touched && !namaTeman.valid">
@@ -38,7 +37,6 @@
             email
             ngModel
             #emailTeman="ngModel"
-            (change)="log(emailTeman)"
             name="email"
           />
           <div class="alert alert-danger" *ngIf="emailTeman.touched && !emailTeman.valid">
@@ -61,7 +59,6 @@
             pattern='[0-9]+'
             ngModel
             #contactTeman="ngModel"
-            (change)="log(contactTeman)"
             name="contact"
             />
           <div class="alert alert-danger" *ngIf="contactTeman.touched && !contactTeman.valid">
@@ -101,14 +98,7 @@
           <td>{{item.email}}</td>
           <td>{{item.contact}}</td>
         </tr>
-        <!-- <h4 *ngIf="(data | filterBy: searchText).length === 0">
-          Not found
-        </h4> -->
       </tbody>
     </table>
   </div>
 </div>
-
-<!-- <ul>
-  <li *ngIf= "authService.isLoggedIn()"><a (click)="authService.logout()">Logout</a></li>
-</ul> -->

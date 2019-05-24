@@ -15,12 +15,11 @@ export class LoginComponent {
     private authService: AuthService) { }
 
   signIn(credentials) {
-    this.authService.login(credentials)
-      .subscribe(result => { 
-        if (result)
-          this.router.navigate(['/friend']);
-        else  
-          this.invalidLogin = true; 
-      });
+    this.authService.login(credentials).subscribe(result => { 
+      if (result)
+        this.router.navigate(['/friend']);
+      else  
+        this.invalidLogin = true; 
+    });
   }
 }

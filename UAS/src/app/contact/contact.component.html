@@ -4,11 +4,12 @@
 <div class="container">
   <div class="col-md-8 offset-md-2">
     <br>
-    <form #form="ngForm" (ngSubmit)="submit(form.value)">
+    <form (ngSubmit)="submit()">
       <div>
         <div class="form-group">
         <label for="nama">Your Name:</label>
         <input
+          (click)= "onNew()"
           type="text"
           id="nama"
           class="form-control"
@@ -16,6 +17,7 @@
           minlength="3"
           ngModel
           autofocus
+          [(ngModel)]="inputModel.name"
           #firstName="ngModel"
           (change)="log(firstName)"
           name="nama"
@@ -36,6 +38,7 @@
         required
         email
         ngModel
+        [(ngModel)]="inputModel.email"
         #emailTeman="ngModel"
         name="email"
         />
@@ -53,26 +56,24 @@
         id="comment"
         required
         ngModel
+        [(ngModel)]="inputModel.comment"
         #comment="ngModel"
         name="comment"
         ></textarea>
       </div>
-      <button type="submit" [disabled]="!form.valid" class="btn btn-primary" (click)="submit()">
+      <button type="submit" [disabled]="!form.valid" class="btn btn-primary">
         Submit
       </button>
     </form>
     <hr>
-
+    
     <div *ngIf="yourData">
       <h2><b>Your Data</b></h2>
-      <ng-container *ngFor="let item of data || item.slice(-1)[0]">
-          <p>Username: {{item.nama}}</p>
-          <p>Email: {{item.email}}</p>
-          <p>Message: {{item.comment}}</p>
-        <p>Username: {{form.value.nama|json}}</p>
-        <p>Email: {{form.value.email|json}}</p>
-        <p>Message: {{form.value.comment|json}}</p>
-      </ng-container>
+      <tr *ngFor="let item of inputData">
+        <p>Username: {{item.name}}</p>
+        <p>Email: {{item.email}}</p>
+        <p>Message: {{item.comment}}</p>
+      </tr>
     </div>
   </div>
 </div>

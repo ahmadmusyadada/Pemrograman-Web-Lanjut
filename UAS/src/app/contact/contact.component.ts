@@ -1,12 +1,22 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+class data{
+  constructor(
+    public name: string = '',
+    public email: string = '',
+    public comment: string = ''
+  ) {}
+}
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
 })
 
 export class ContactComponent implements OnInit{
+  inputData: data[] = [];
+  inputModel: data;
   yourData: boolean; 
 
   ngOnInit() {
@@ -16,12 +26,12 @@ export class ContactComponent implements OnInit{
     {nama: '', email: '', comment: ''}
   ]
   
-  log(x){
-    console.log(x);
+  onNew() {
+    this.inputModel = new data();
   }
 
-  submit(form){
-    this.data.push({nama: form.nama , email: form.email, comment: form.comment});
+  submit(){
+    this.inputData.push(this.inputModel);
     this.yourData = true;
   }
 }

@@ -22,10 +22,6 @@ export class ContactComponent implements OnInit{
   ngOnInit() {
   }
 
-  data=[
-    {nama: '', email: '', comment: ''}
-  ]
-  
   onNew() {
     this.inputModel = new data();
   }
